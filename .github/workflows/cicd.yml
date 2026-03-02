@@ -23,10 +23,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and Push Docker Image
-  uses: docker/build-push-action@v5
-  with:
-    context: .
-    push: true
-    tags: |
-      dhairyashil8416/dhairyashil84216demo2:latest
-      dhairyashil8416/dhairyashil84216demo2:${{ github.sha }}
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            dhairyashil8416/dhairyashil84216demo2:latest
+            dhairyashil8416/dhairyashil84216demo2:${{ github.sha }}
